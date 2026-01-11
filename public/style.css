@@ -1,0 +1,160 @@
+:root {
+    --bgBody: #f0f0f0;
+    --mainWhite: #ffffff;
+    --mainBlack: #000000;
+    --mainBlue: #0052ff;
+    --borderWidth: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bgBody);
+    color: var(--mainBlack);
+    padding: 20px;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: var(--borderWidth) solid var(--mainBlack);
+    background: var(--mainWhite);
+    padding: 15px 25px;
+    margin-bottom: 20px;
+}
+
+.brandBox h1 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.brandBox h1 span {
+    color: var(--mainBlue);
+}
+
+.headerMeta {
+    display: flex;
+    gap: 30px;
+}
+
+.metaItem .label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+}
+
+.metaItem .value {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+}
+
+.gridWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.quickMetrics {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.infoCard {
+    background: var(--mainWhite);
+    border: var(--borderWidth) solid var(--mainBlack);
+    padding: 20px;
+    box-shadow: 4px 4px 0px var(--mainBlack);
+}
+
+.infoCard p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.blueCard {
+    background: var(--mainBlue);
+    color: white;
+}
+
+.mainAnalysis {
+    grid-column: span 3;
+    background: var(--mainWhite);
+    border: var(--borderWidth) solid var(--mainBlack);
+    padding: 20px;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.canvasBox {
+    height: 300px;
+}
+
+.resourceGrid {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statBox {
+    background: var(--mainWhite);
+    border: var(--borderWidth) solid var(--mainBlack);
+    padding: 15px;
+}
+
+.statHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progressOuter {
+    height: 12px;
+    background: #e0e0e0;
+    border: 1px solid var(--mainBlack);
+}
+
+.progressInner {
+    height: 100%;
+    background: var(--mainBlue);
+    width: 0%;
+}
+
+.logConsole {
+    grid-column: span 4;
+    background: var(--mainBlack);
+    color: #00ff00;
+    border: var(--borderWidth) solid var(--mainBlack);
+    padding: 20px;
+}
+
+.consoleHeader {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.logEntry {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
