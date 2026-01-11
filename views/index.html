@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Monitor System</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="mainHeader">
+        <div class="brandBox">
+            <h1>SYSTEM<span>CORE</span></h1>
+        </div>
+        <div class="headerMeta">
+            <div class="metaItem">
+                <span class="label">IP_ADDR:</span>
+                <span class="value">192.168.1.104</span>
+            </div>
+            <div class="metaItem">
+                <span class="label">REGION:</span>
+                <span class="value">ID-JKT-01</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="gridWrapper">
+        <section class="quickMetrics">
+            <div class="infoCard">
+                <p>System Uptime</p>
+                <h2 id="uptimeText">00:00:00</h2>
+            </div>
+            <div class="infoCard">
+                <p>Total Requests</p>
+                <h2 id="requestCount">0</h2>
+            </div>
+            <div class="infoCard">
+                <p>DB Latency</p>
+                <h2 id="dbLatency">0ms</h2>
+            </div>
+            <div class="infoCard blueCard">
+                <p>Security Status</p>
+                <h2>ENCRYPTED</h2>
+            </div>
+        </section>
+
+        <section class="mainAnalysis">
+            <div class="chartContainer">
+                <div class="chartHeader">
+                    <h3>Realtime Throughput</h3>
+                    <div class="legend">
+                        <span class="dot blue"></span> Traffic
+                    </div>
+                </div>
+                <div class="canvasBox">
+                    <canvas id="liveChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="resourceGrid">
+            <div class="statBox">
+                <div class="statHeader">
+                    <span>CPU LOAD</span>
+                    <span id="cpuPercent">0%</span>
+                </div>
+                <div class="progressOuter">
+                    <div class="progressInner" id="cpuBar"></div>
+                </div>
+            </div>
+
+            <div class="statBox">
+                <div class="statHeader">
+                    <span>RAM USAGE</span>
+                    <span id="ramPercent">0%</span>
+                </div>
+                <div class="progressOuter">
+                    <div class="progressInner" id="ramBar"></div>
+                </div>
+            </div>
+
+            <div class="statBox">
+                <div class="statHeader">
+                    <span>DISK CAPACITY</span>
+                    <span id="diskPercent">0%</span>
+                </div>
+                <div class="progressOuter">
+                    <div class="progressInner" id="diskBar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logConsole">
+            <div class="consoleHeader">System Activities</div>
+            <div class="logBody" id="logWrapper">
+                <div class="logEntry">Initializing monitoring kernels...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
